@@ -1,4 +1,4 @@
-FROM ruby:2.2.5
+FROM ruby:2.3.1
 
 COPY Gemfile* /tmp/
 WORKDIR /tmp
@@ -9,3 +9,4 @@ ENV APP /app
 RUN mkdir $APP
 WORKDIR $APP
 ADD . $APP
+EXPOSE 9393
